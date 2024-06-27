@@ -1,0 +1,20 @@
+server:
+  port: 9090
+  address:  192.168.1.200
+  
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vehicle_insurance_project
+    username: root
+    password: Bharath@0504
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: true
+          
