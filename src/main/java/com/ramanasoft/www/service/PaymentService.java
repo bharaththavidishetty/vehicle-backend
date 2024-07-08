@@ -35,5 +35,10 @@ public class PaymentService
 	{
 		return paymentRepository.findByCustomerid(nmbr);
 	}
+
+	public List<Payment> fetchPolocy(String vnumber) {
+		
+		return paymentRepository.findByVnumber(vnumber);
+	}
 }
 

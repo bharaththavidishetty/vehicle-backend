@@ -50,6 +50,12 @@ public class PaymentController
 		return paymentService.fetch(id);
 	}
 	
+	@GetMapping("/fetchPolocyByVnumber/{vnumber}")
+	public List<Payment> fetchPolocy(@PathVariable String vnumber)
+	{
+		return paymentService.fetchPolocy(vnumber);
+	}
+	
 	@GetMapping("/create")
     public void createPdf(HttpServletResponse response, @RequestParam String paymentid, @RequestParam long customerid) {
         // Setting content type and response headers
